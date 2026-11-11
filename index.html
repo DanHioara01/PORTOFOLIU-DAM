@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofoliu React Native — Laboratoarele 5–11</title>
+  <meta name="description" content="Demo-uri pas cu pas pentru laboratoarele 5–11 de React Native: login, notițe, cameră, locație, notificări, Context API și EAS Build.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site">
+    <a class="brand" href="#top">
+      <span class="brand__mark">RN</span>
+      <span class="brand__name">Laboratoare 5–11</span>
+    </a>
+    <nav class="site__nav" aria-label="Laboratoare">
+      <a href="#lab05">05</a>
+      <a href="#lab06">06</a>
+      <a href="#lab07">07</a>
+      <a href="#lab08">08</a>
+      <a href="#lab09">09</a>
+      <a href="#lab10">10</a>
+      <a href="#lab11">11</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Portofoliu · React Native · Expo</p>
+      <h1 class="hero__title">Șapte laboratoare,<br><em>opt demo-uri</em>, pas cu pas.</h1>
+      <p class="hero__lede">
+        Fiecare laborator are un GIF care arată aplicația în funcțiune: ce apeși,
+        ce se întâmplă și ce rămâne după reload. Unde funcția ține de telefon,
+        cadrul este marcat ca ilustrativ.
+      </p>
+      <dl class="stats">
+        <div><dt>Laboratoare</dt><dd>7</dd></div>
+        <div><dt>Demo-uri</dt><dd>8</dd></div>
+        <div><dt>Doar pe telefon</dt><dd>6</dd></div>
+      </dl>
+    </section>
+
+    <section class="labs" aria-label="Laboratoare">
+
+      <article class="lab reveal" id="lab05">
+        <div class="lab__meta">
+          <p class="lab__num">Laboratorul 05</p>
+          <h2>Refresh, paginare, progres</h2>
+          <p class="lab__desc">
+            Un catalog paginat din dummyjson și două componente independente:
+            o bară de progres determinată și un cronometru.
+          </p>
+          <ul class="lab__points">
+            <li>Paginare automată la scroll, fără duplicate</li>
+            <li>Reîmprospătare care păstrează lista pe ecran</li>
+            <li>Trei tipuri de erori, fiecare cu locul ei</li>
+          </ul>
+          <ul class="tags">
+            <li>FlatList</li><li>RefreshControl</li><li>fetch</li>
+          </ul>
+        </div>
+        <div class="lab__media lab__media--pair">
+          <figure class="phone">
+            <img src="assets/lab05-catalog.gif" alt="Catalog paginat: erori, reîmprospătare și reîncercare" loading="lazy">
+            <figcaption>Paginare + 3 tipuri de erori</figcaption>
+          </figure>
+          <figure class="phone phone--offset">
+            <img src="assets/lab05-progres.gif" alt="Bară de progres și cronometru" loading="lazy">
+            <figcaption>Progres + cronometru</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="lab reveal" id="lab06">
+        <div class="lab__meta">
+          <p class="lab__num">Laboratorul 06</p>
+          <h2>Login și persistență</h2>
+          <p class="lab__desc">
+            Autentificare cu DummyJSON, sesiune salvată în SecureStore și notițe
+            ținute pe utilizator în AsyncStorage.
+          </p>
+          <ul class="lab__points">
+            <li>Parolă greșită → mesajul serverului, butonul revine</li>
+            <li>Reload → intri direct pe profil</li>
+            <li>Logout → rămâne delogat și după reload</li>
+          </ul>
+          <ul class="tags">
+            <li>SecureStore</li><li>AsyncStorage</li><li>Navigation</li>
+          </ul>
+        </div>
+        <div class="lab__media">
+          <figure class="phone">
+            <img src="assets/lab06.gif" alt="Login greșit, login corect, notițe persistente și logout" loading="lazy">
+            <figcaption>Cont de test: emilys</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="lab reveal" id="lab07">
+        <div class="lab__meta">
+          <p class="lab__num">Laboratorul 07</p>
+          <h2>Cameră, galerie, jurnal foto, QR</h2>
+          <p class="lab__desc">
+            Jurnal foto cu selecție din galerie, cameră, grilă și vizualizare
+            mărită. Perechea 2 adaugă persistență în fișiere și scanner QR.
+          </p>
+          <ul class="lab__points">
+            <li>Galeria și grila se pot proba pe Web</li>
+            <li>Camera și scannerul QR cer telefonul</li>
+            <li>Persistența copiază fișierele în Paths.document</li>
+          </ul>
+          <ul class="tags">
+            <li>ImagePicker</li><li>Camera</li><li>FileSystem</li>
+          </ul>
+          <p class="badge">Parțial storyboard</p>
+        </div>
+        <div class="lab__media">
+          <figure class="phone">
+            <img src="assets/lab07.gif" alt="Jurnal foto: galerie, grilă, vizualizare mărită și cadre ilustrative pentru cameră" loading="lazy">
+            <figcaption>Galerie pe Web · cameră/QR ilustrate</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="lab reveal" id="lab08">
+        <div class="lab__meta">
+          <p class="lab__num">Laboratorul 08</p>
+          <h2>Locație, distanțe, hartă</h2>
+          <p class="lab__desc">
+            Permisiune de locație, distanțe Haversine, șase cafenele demo,
+            OpenStreetMap cu fallback și hartă nativă.
+          </p>
+          <ul class="lab__points">
+            <li>Lista este sortată după distanță</li>
+            <li>Selecția din listă se reflectă pe hartă</li>
+            <li>OSM căzut → mesaj și date demo</li>
+          </ul>
+          <ul class="tags">
+            <li>expo-location</li><li>Haversine</li><li>Overpass</li>
+          </ul>
+          <p class="badge">Parțial storyboard</p>
+        </div>
+        <div class="lab__media">
+          <figure class="phone">
+            <img src="assets/lab08.gif" alt="Listă de cafenele sortată după distanță, tab hartă și cadre ilustrative" loading="lazy">
+            <figcaption>Locație simulată în browser</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="lab reveal" id="lab09">
+        <div class="lab__meta">
+          <p class="lab__num">Laboratorul 09</p>
+          <h2>Notificări locale</h2>
+          <p class="lab__desc">
+            Remindere programate după un interval, listă, anulare și listener.
+            Perechea 2 adaugă DATE, DAILY și reconciliere după restart.
+          </p>
+          <ul class="lab__points">
+            <li>Permisiunea se cere la „Programează”</li>
+            <li>10 s → banner în aplicație</li>
+            <li>Oră 25 / minut 70 → validare, nu se programează</li>
+          </ul>
+          <ul class="tags">
+            <li>expo-notifications</li><li>AsyncStorage</li><li>AppState</li>
+          </ul>
+          <p class="badge">Doar pe telefon</p>
+        </div>
+        <div class="lab__media">
+          <figure class="phone">
+            <img src="assets/lab09.gif" alt="Mesajul pentru Web și cadre ilustrative pentru notificări pe telefon" loading="lazy">
+            <figcaption>Web: mesaj informativ · restul ilustrat</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="lab reveal" id="lab10">
+        <div class="lab__meta">
+          <p class="lab__num">Laboratorul 10</p>
+          <h2>Context API</h2>
+          <p class="lab__desc">
+            Auth, Notes și Theme ca trei contexte separate. Ecranele nu mai
+            primesc date prin props, iar tema se păstrează la reload.
+          </p>
+          <ul class="lab__points">
+            <li>Comutatorul schimbă ecranele deschise și antetul</li>
+            <li>Tema se restaurează fără clipire</li>
+            <li>NotesProvider stă în interiorul AuthProvider</li>
+          </ul>
+          <ul class="tags">
+            <li>useReducer</li><li>Context</li><li>Theme</li>
+          </ul>
+        </div>
+        <div class="lab__media">
+          <figure class="phone">
+            <img src="assets/lab10.gif" alt="Login, comutare temă, notițe și reload cu persistență" loading="lazy">
+            <figcaption>Temă + sesiune + notițe după reload</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="lab reveal" id="lab11">
+        <div class="lab__meta">
+          <p class="lab__num">Laboratorul 11</p>
+          <h2>EAS Build (APK)</h2>
+          <p class="lab__desc">
+            Ecran cu informații despre build și configurarea unui profil
+            <code>preview</code> care produce APK, nu AAB.
+          </p>
+          <ul class="lab__points">
+            <li><code>--profile preview</code> → <code>android.buildType: apk</code></li>
+            <li>Expo Go: <code>__DEV__</code> true, mediu storeClient</li>
+            <li>APK: ID aplicație și versiune nativă reale</li>
+          </ul>
+          <ul class="tags">
+            <li>eas.json</li><li>expo-constants</li><li>expo-application</li>
+          </ul>
+          <p class="badge">Parțial storyboard</p>
+        </div>
+        <div class="lab__media">
+          <figure class="phone">
+            <img src="assets/lab11.gif" alt="Ecranul Informații despre build și cadre ilustrative pentru EAS Build" loading="lazy">
+            <figcaption>Ecran real + pași EAS ilustrați</figcaption>
+          </figure>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="note reveal">
+      <p class="eyebrow">Cum se citește</p>
+      <p>
+        Cadrele normale sunt capturi reale în browser, prin Expo Web. Laboratoarele
+        7, 8, 9 și 11 au și cadre ilustrative, marcate „doar pe telefon”, pentru
+        funcții care nu pot fi rulate în browser: cameră, scanner QR, hartă
+        nativă, notificări și build-ul EAS.
+      </p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Portofoliu React Native · Laboratoarele 5–11</p>
+    <p class="foot__muted">GIF-uri: 640 px lățime, 10 fps, titlu + pași + rezumat.</p>
+  </footer>
+
+  <script>
+    const items = document.querySelectorAll('.reveal');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach((el) => el.classList.add('is-visible'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+      items.forEach((el) => io.observe(el));
+    }
+  </script>
+</body>
+</html>
