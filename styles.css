@@ -438,7 +438,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 #lab05 .phone {
-  width: min(100%, 420px);
+  width: min(100%, 600px);
 }
 .phone img {
   width: 100%;
