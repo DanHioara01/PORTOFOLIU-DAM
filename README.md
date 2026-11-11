@@ -1,5 +1,7 @@
 # Portofoliu React Native — Laboratoarele 5–11
 
+**Publicat:** https://danhioara01.github.io/portofoliu-rn/
+
 Pagină statică (HTML + CSS) cu cele 8 demo-uri GIF. Fără build, fără dependențe.
 GIF-urile sunt în `assets/`, iar pagina le încarcă lazy, pe măsură ce derulezi.
 
