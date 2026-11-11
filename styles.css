@@ -221,27 +221,46 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 280px;
+  min-height: 400px;
 }
 .hero__glow {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.5), transparent 70%);
-  filter: blur(40px);
-}
-.hero__badge {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.55), transparent 70%);
+  filter: blur(50px);
+  z-index: 0;
+}
+.phone--hero {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 300px);
+  transform: rotate(-4deg);
+  transition: transform 0.4s ease;
+}
+.phone--hero:hover { transform: rotate(0deg) translateY(-8px); }
+
+.hero__stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+@media (min-width: 1024px) { .hero__stats { justify-content: flex-start; } }
+.hero__stat { display: flex; flex-direction: column; }
+.hero__stat-num {
+  font-size: 2rem;
+  font-weight: 700;
   color: #fff;
-  font-weight: 600;
-  font-size: 1.125rem;
-  box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.6);
+  line-height: 1;
+}
+.hero__stat-label {
+  font-size: 0.75rem;
+  color: var(--muted-2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
 }
 
 /* ---------- sections ---------- */
@@ -260,18 +279,18 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 3rem;
 }
 
-.labs, .about { padding: 5rem 0; }
+.labs, .about { padding: 6rem 0; }
 
 /* ---------- lab card (alternating) ---------- */
 .lab {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 3rem;
   align-items: center;
-  margin-bottom: 6rem;
+  margin-bottom: 8rem;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .lab.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -387,9 +406,9 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: center;
 }
 .phone {
-  width: min(100%, 320px);
-  padding: 10px;
-  border-radius: 2.5rem;
+  width: min(100%, 340px);
+  padding: 12px;
+  border-radius: 2.75rem;
   background: linear-gradient(160deg, #1a0f2e, #0d0618 70%);
   border: 1px solid var(--border-strong);
   box-shadow:
