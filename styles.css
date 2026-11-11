@@ -389,15 +389,20 @@ img { max-width: 100%; height: auto; display: block; }
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.tags span {
-  font-family: var(--font);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--muted-2);
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  padding: 0.25rem 0.6rem;
+.download {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px -4px rgba(124, 58, 237, 0.5);
+}
+.download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(124, 58, 237, 0.7);
 }
 
 /* ---------- phone frame ---------- */
