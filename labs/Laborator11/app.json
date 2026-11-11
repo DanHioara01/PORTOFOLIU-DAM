@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Build Info",
+    "slug": "build-info",
+    "version": "1.0.0",
+    "android": {
+      "package": "ro.exemplu.buildinfo"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Laborator 10 - Perechea 2",
+    "slug": "laborator10-perechea2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light"
+  }
+}
