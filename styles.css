@@ -332,6 +332,12 @@ main {
   padding: 0.28rem 0.5rem;
 }
 
+.badge--web {
+  background: transparent;
+  color: var(--teal);
+  border: 1px solid currentColor;
+}
+
 /* ---------- phone frames ---------- */
 
 .lab__media {

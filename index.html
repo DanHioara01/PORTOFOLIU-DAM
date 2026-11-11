@@ -35,13 +35,13 @@
       <h1 class="hero__title">Șapte laboratoare,<br><em>opt demo-uri</em>, pas cu pas.</h1>
       <p class="hero__lede">
         Fiecare laborator are un GIF care arată aplicația în funcțiune: ce apeși,
-        ce se întâmplă și ce rămâne după reload. Unde funcția ține de telefon,
-        cadrul este marcat ca ilustrativ.
+        ce se întâmplă și ce rămâne după reload. Laboratoarele 5, 6 și 10 sunt
+        filmate în browser, iar 7, 8, 9 și 11 direct pe telefon.
       </p>
       <dl class="stats">
         <div><dt>Laboratoare</dt><dd>7</dd></div>
         <div><dt>Demo-uri</dt><dd>8</dd></div>
-        <div><dt>Doar pe telefon</dt><dd>6</dd></div>
+        <div><dt>Pe telefon</dt><dd>4</dd></div>
       </dl>
     </section>
 
@@ -52,17 +52,21 @@
           <p class="lab__num">Laboratorul 05</p>
           <h2>Refresh, paginare, progres</h2>
           <p class="lab__desc">
-            Un catalog paginat din dummyjson și două componente independente:
-            o bară de progres determinată și un cronometru.
+            Un catalog paginat din dummyjson și două componente independente,
+            testate separat: o bară de progres determinată și un cronometru.
+            Ecranul parcurge paginarea automată, reîmprospătarea și cele trei
+            tipuri de erori, fiecare cu locul ei.
           </p>
           <ul class="lab__points">
             <li>Paginare automată la scroll, fără duplicate</li>
             <li>Reîmprospătare care păstrează lista pe ecran</li>
-            <li>Trei tipuri de erori, fiecare cu locul ei</li>
+            <li>Rețea căzută → banner cu reîncercare, listă goală → mesaj</li>
+            <li>Cronometrul pornește, se oprește și se resetează</li>
           </ul>
           <ul class="tags">
             <li>FlatList</li><li>RefreshControl</li><li>fetch</li>
           </ul>
+          <p class="badge badge--web">Capturat în browser</p>
         </div>
         <div class="lab__media lab__media--pair">
           <figure class="phone">
@@ -82,16 +86,19 @@
           <h2>Login și persistență</h2>
           <p class="lab__desc">
             Autentificare cu DummyJSON, sesiune salvată în SecureStore și notițe
-            ținute pe utilizator în AsyncStorage.
+            ținute pe utilizator în AsyncStorage. Demo-ul parcurge parolă greșită,
+            login reușit, notițe, reload și logout.
           </p>
           <ul class="lab__points">
-            <li>Parolă greșită → mesajul serverului, butonul revine</li>
-            <li>Reload → intri direct pe profil</li>
+            <li>Parolă greșită → mesajul serverului, butonul revine activ</li>
+            <li>Reload → intri direct pe profil, fără re-login</li>
+            <li>Notițele sunt separate pe utilizator</li>
             <li>Logout → rămâne delogat și după reload</li>
           </ul>
           <ul class="tags">
             <li>SecureStore</li><li>AsyncStorage</li><li>Navigation</li>
           </ul>
+          <p class="badge badge--web">Capturat în browser</p>
         </div>
         <div class="lab__media">
           <figure class="phone">
@@ -107,22 +114,25 @@
           <h2>Cameră, galerie, jurnal foto, QR</h2>
           <p class="lab__desc">
             Jurnal foto cu selecție din galerie, cameră, grilă și vizualizare
-            mărită. Perechea 2 adaugă persistență în fișiere și scanner QR.
+            mărită. Perechea 2 adaugă persistență în fișiere și un tab de scanner
+            QR. Tot parcursul e filmat pe telefon, iar în GIF nu apare deloc
+            galeria sistemului.
           </p>
           <ul class="lab__points">
-            <li>Galeria și grila se pot proba pe Web</li>
-            <li>Camera și scannerul QR cer telefonul</li>
-            <li>Persistența copiază fișierele în Paths.document</li>
+            <li>Fiecare fotografie e copiată în Paths.document, nu doar referită</li>
+            <li>Reload → fotografiile și legendele rămân pe loc</li>
+            <li>Atingere pe miniatură → vizualizare mărită, cu legendă și dată</li>
+            <li>Atingere lungă → ștergere, cu confirmare</li>
           </ul>
           <ul class="tags">
             <li>ImagePicker</li><li>Camera</li><li>FileSystem</li>
           </ul>
-          <p class="badge">Parțial storyboard</p>
+          <p class="badge badge--phone">Capturat pe telefon</p>
         </div>
         <div class="lab__media">
           <figure class="phone">
-            <img src="assets/lab07.gif" alt="Jurnal foto: galerie, grilă, vizualizare mărită și cadre ilustrative pentru cameră" loading="lazy">
-            <figcaption>Galerie pe Web · cameră/QR ilustrate</figcaption>
+            <img src="assets/lab07.gif" alt="Jurnal foto: legendă, fotografie adăugată, vizualizare mărită și scanner QR" loading="lazy">
+            <figcaption>Ca pe telefon: fără cadre din galerie</figcaption>
           </figure>
         </div>
       </article>
@@ -133,22 +143,24 @@
           <h2>Locație, distanțe, hartă</h2>
           <p class="lab__desc">
             Permisiune de locație, distanțe Haversine, șase cafenele demo,
-            OpenStreetMap cu fallback și hartă nativă.
+            OpenStreetMap cu fallback pe date demo și hartă nativă. Lista e
+            sortată după distanță, iar selecția se reflectă pe hartă.
           </p>
           <ul class="lab__points">
-            <li>Lista este sortată după distanță</li>
-            <li>Selecția din listă se reflectă pe hartă</li>
-            <li>OSM căzut → mesaj și date demo</li>
+            <li>Lista e sortată după distanță, cea mai apropiată e evidențiată</li>
+            <li>Selecția din listă apare și pe hartă</li>
+            <li>OpenStreetMap indisponibil → mesaj clar și trecere pe date demo</li>
+            <li>„Urmărește poziția” recalculează distanțele la fiecare mișcare</li>
           </ul>
           <ul class="tags">
             <li>expo-location</li><li>Haversine</li><li>Overpass</li>
           </ul>
-          <p class="badge">Parțial storyboard</p>
+          <p class="badge badge--phone">Capturat pe telefon</p>
         </div>
         <div class="lab__media">
           <figure class="phone">
-            <img src="assets/lab08.gif" alt="Listă de cafenele sortată după distanță, tab hartă și cadre ilustrative" loading="lazy">
-            <figcaption>Locație simulată în browser</figcaption>
+            <img src="assets/lab08.gif" alt="Locație reală, listă de cafenele sortată după distanță și hartă nativă" loading="lazy">
+            <figcaption>Locație reală, listă și hartă</figcaption>
           </figure>
         </div>
       </article>
@@ -158,23 +170,25 @@
           <p class="lab__num">Laboratorul 09</p>
           <h2>Notificări locale</h2>
           <p class="lab__desc">
-            Remindere programate după un interval, listă, anulare și listener.
-            Perechea 2 adaugă DATE, DAILY și reconciliere după restart.
+            Remindere programate după un interval sau zilnic, listă, anulare și
+            listener. Perechea 2 adaugă tipurile DATE și DAILY plus reconcilierea
+            listei salvate cu notificările încă programate după restart.
           </p>
           <ul class="lab__points">
-            <li>Permisiunea se cere la „Programează”</li>
-            <li>10 s → banner în aplicație</li>
+            <li>Permisiunea se cere abia la „Programează”</li>
+            <li>Reminderul „o dată” dispare din listă când notificarea sosește</li>
             <li>Oră 25 / minut 70 → validare, nu se programează</li>
+            <li>Lista salvată e reconciliată cu notificările active după restart</li>
           </ul>
           <ul class="tags">
-            <li>expo-notifications</li><li>AsyncStorage</li><li>AppState</li>
+            <li>expo-notifications</li><li>AsyncStorage</li><li>Scheduling</li>
           </ul>
-          <p class="badge">Doar pe telefon</p>
+          <p class="badge badge--phone">Capturat pe telefon</p>
         </div>
         <div class="lab__media">
           <figure class="phone">
-            <img src="assets/lab09.gif" alt="Mesajul pentru Web și cadre ilustrative pentru notificări pe telefon" loading="lazy">
-            <figcaption>Web: mesaj informativ · restul ilustrat</figcaption>
+            <img src="assets/lab09.gif" alt="Remindere programate pe telefon și bannerul notificării la momentul potrivit" loading="lazy">
+            <figcaption>Reminder programat și banner real</figcaption>
           </figure>
         </div>
       </article>
@@ -184,17 +198,20 @@
           <p class="lab__num">Laboratorul 10</p>
           <h2>Context API</h2>
           <p class="lab__desc">
-            Auth, Notes și Theme ca trei contexte separate. Ecranele nu mai
-            primesc date prin props, iar tema se păstrează la reload.
+            Auth, Notes și Theme ca trei contexte separate; ecranele nu mai
+            primesc date prin props. Comutatorul schimbă toate ecranele deschise,
+            iar tema se păstrează la reload.
           </p>
           <ul class="lab__points">
             <li>Comutatorul schimbă ecranele deschise și antetul</li>
             <li>Tema se restaurează fără clipire</li>
             <li>NotesProvider stă în interiorul AuthProvider</li>
+            <li>Logout-ul golește lista de notițe din context</li>
           </ul>
           <ul class="tags">
             <li>useReducer</li><li>Context</li><li>Theme</li>
           </ul>
+          <p class="badge badge--web">Capturat în browser</p>
         </div>
         <div class="lab__media">
           <figure class="phone">
@@ -209,23 +226,25 @@
           <p class="lab__num">Laboratorul 11</p>
           <h2>EAS Build (APK)</h2>
           <p class="lab__desc">
-            Ecran cu informații despre build și configurarea unui profil
-            <code>preview</code> care produce APK, nu AAB.
+            Ecran cu informații despre build și un profil <code>preview</code> care
+            produce APK, nu AAB. În Expo Go valorile native apar ca „—”, pentru că
+            sunt completate doar de un build instalat.
           </p>
           <ul class="lab__points">
             <li><code>--profile preview</code> → <code>android.buildType: apk</code></li>
-            <li>Expo Go: <code>__DEV__</code> true, mediu storeClient</li>
-            <li>APK: ID aplicație și versiune nativă reale</li>
+            <li>Expo Go: <code>__DEV__</code> true, mediul de execuție „bare” (SDK 58)</li>
+            <li><code>EXPO_PUBLIC_*</code> static se înlocuiește la împachetare; referirea dinamică rămâne „—”</li>
+            <li>În APK: ID aplicație, versiune nativă și cod de build reale</li>
           </ul>
           <ul class="tags">
             <li>eas.json</li><li>expo-constants</li><li>expo-application</li>
           </ul>
-          <p class="badge">Parțial storyboard</p>
+          <p class="badge badge--phone">Capturat pe telefon</p>
         </div>
         <div class="lab__media">
           <figure class="phone">
-            <img src="assets/lab11.gif" alt="Ecranul Informații despre build și cadre ilustrative pentru EAS Build" loading="lazy">
-            <figcaption>Ecran real + pași EAS ilustrați</figcaption>
+            <img src="assets/lab11.gif" alt="Ecranul Informații despre build, rulat pe telefon în Expo Go" loading="lazy">
+            <figcaption>Ecran real, rulat pe telefon</figcaption>
           </figure>
         </div>
       </article>
@@ -235,17 +254,17 @@
     <section class="note reveal">
       <p class="eyebrow">Cum se citește</p>
       <p>
-        Cadrele normale sunt capturi reale în browser, prin Expo Web. Laboratoarele
-        7, 8, 9 și 11 au și cadre ilustrative, marcate „doar pe telefon”, pentru
-        funcții care nu pot fi rulate în browser: cameră, scanner QR, hartă
-        nativă, notificări și build-ul EAS.
+        Toate cadrele sunt capturi reale ale aplicației: laboratoarele 5, 6 și 10
+        în browser, prin Expo Web, iar 7, 8, 9 și 11 direct pe telefon. În GIF-uri
+        apar doar ecranele aplicației, fără galeria sistemului și fără carduri de
+        titlu.
       </p>
     </section>
   </main>
 
   <footer class="foot">
     <p>Portofoliu React Native · Laboratoarele 5–11</p>
-    <p class="foot__muted">GIF-uri: 640 px lățime, 10 fps, titlu + pași + rezumat.</p>
+    <p class="foot__muted">GIF-uri: 640 px lățime, 10 fps, doar ecranele aplicației.</p>
   </footer>
 
   <script>

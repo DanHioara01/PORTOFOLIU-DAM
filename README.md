@@ -62,6 +62,8 @@ assets/
 
 - Fonturile (Fraunces, Inter, JetBrains Mono) sunt încărcate din Google Fonts;
   fără internet pagina folosește fonturile de sistem.
-- Laboratoarele 7, 8, 9 și 11 conțin și cadre ilustrative, marcate în pagină,
-  pentru funcții disponibile doar pe telefon.
+- Toate GIF-urile sunt capturi reale ale aplicației: laboratoarele 5, 6 și 10 în
+  browser (Expo Web), iar 7, 8, 9 și 11 direct pe telefon.
+- În GIF-uri apar doar ecranele aplicației: fără galeria sistemului, fără carduri
+  de titlu sau liste de pași suprapuse.
 - Nu există date personale sau chei API în pagină.
