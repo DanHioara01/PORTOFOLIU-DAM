@@ -436,6 +436,10 @@ img { max-width: 100%; height: auto; display: block; }
   flex: 1;
   border-radius: 1.5rem;
 }
+
+#lab05 .phone {
+  width: min(100%, 420px);
+}
 .phone img {
   width: 100%;
   border-radius: 1.75rem;
