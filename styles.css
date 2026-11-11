@@ -400,9 +400,15 @@ img { max-width: 100%; height: auto; display: block; }
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 16px -4px rgba(124, 58, 237, 0.5);
 }
-.download:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px -4px rgba(124, 58, 237, 0.7);
+.download--snack {
+  background: transparent;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  box-shadow: none;
+}
+.download--snack:hover {
+  background: rgba(167, 139, 250, 0.1);
+  box-shadow: none;
 }
 
 /* ---------- phone frame ---------- */
