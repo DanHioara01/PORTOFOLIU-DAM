@@ -1,4 +1,4 @@
-# Portofoliu React Native — Laboratoarele 5–11
+# Portofoliu — Laboratoarele 5–11
 
 **Publicat:** https://danhioara01.github.io/portofoliu-rn/
 
