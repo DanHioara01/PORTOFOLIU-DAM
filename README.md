@@ -1,6 +1,6 @@
 # Portofoliu — Laboratoarele 5–11
 
-**Publicat:** https://danhioara01.github.io/portofoliu-rn/
+**Publicat:** https://danhioara01.github.io/PORTOFOLIU-DAM/
 
 Pagină statică (HTML + CSS) cu cele 8 demo-uri GIF. Fără build, fără dependențe.
 GIF-urile sunt în `assets/`, iar pagina le încarcă lazy, pe măsură ce derulezi.
@@ -17,7 +17,7 @@ python -m http.server 8000
 
 ## Publicare pe GitHub Pages
 
-1. Creează un repository **public** pe GitHub, de exemplu `portofoliu-rn`.
+1. Creează un repository **public** pe GitHub, de exemplu `PORTOFOLIU-DAM`.
 2. În folderul `portfolio`:
 
 ```bash
@@ -25,7 +25,7 @@ git init
 git add .
 git commit -m "Portofoliu laboratoare 5-11"
 git branch -M main
-git remote add origin https://github.com/<utilizator>/portofoliu-rn.git
+git remote add origin https://github.com/<utilizator>/PORTOFOLIU-DAM.git
 git push -u origin main
 ```
 
@@ -37,7 +37,7 @@ git push -u origin main
 4. După ~1 minut, linkul este:
 
 ```
-https://<utilizator>.github.io/portofoliu-rn/
+https://<utilizator>.github.io/PORTOFOLIU-DAM/
 ```
 
 Acesta este linkul care se predă.
